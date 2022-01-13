@@ -9,11 +9,9 @@
     
 </head>
 <body>
-<div class="text">
-    <details>
-        <summary>инициализация и работа в локальном репозитории</summary>
-        <div class="text">тег &lt;details&gt; скрывает текст</div>
-    </div>
+
+     <h2>Инициализация и работа в локальном репозитории</h2>    
+        
         <details>
             <summary>инициализация </summary>
             <div class="text">
@@ -122,8 +120,66 @@
                          <code>*.txt </code>     <br><br>          
             </div>
         </details>
+        <h2>Удаленный репозиторий</h2>
+        <details>
+              <summary> СОЗДАНИЕ РЕПОЗИТОРИЯ НА GITHUB </summary> 
+               <div class="text">
+               1. Name — имя репозитория, вводится английскими буквами; <br>  
+               2. Description — описание репозитория (опционально); <br>  
+               3. Include README — автоматическое создание README.md ; <br>  
+               4. Add .gitignore — добавление преднастроенного .gitignore ; <br>  
+               5. Add a license — добавление информации о лицензии. <br>  
+                <figure>
+            <p ><img class="picture" src="images/URL репозитория.PNG"  alt=" URL репозитория"></p>
+            <figcaption>
+            Для дальнейших операций нам необходим URL, по которому располагается созданный нами репозиторий
+            </figcaption>
+            </figure>
+             Команда <code> git remote</code> позволяет нам управлять удалёнными репозиториями (добавлять, удалять, просматривать).<br>  <br>  
+                     Проверим, что локальный репозиторий успешно связался с удалённым:         
+                     <code> git remote -v</code><br>  
+                     Общепринято, что первый удалённый репозиторий называют<code>origin</code> <br>  
+            </div>
+</details>
+<details>
+           <summary> <h3> к локальному репозиторию с проектом, привязать удаленный репозиторий на GitHub</h3></summary>
+            <div class="text">
 
-    </details>
+                локальный репозиторий с проектом, подключить к удалённому:
+               <code> git remote add origin url репозитория </code>  <br> 
+               например <code> git remote add origin https://github.com/netology-git/demo.git </code><br>       
+            </div>
+        </details>
+        <details>
+           <summary> локального репозитория еще нет, надо начать новый проект, с привязкой к удаленному репозиторию на GitHub;</summary>
+            <div class="text">
+               <code>git clone</code>  позволяет нам склонировать удалённый репозиторий,т.е. буквально взять почти всю информацию, хранящуюся в
+                 удаленом репозитории и создать копию на нашем компьютере                 
+                     <code>git clone https://github.com/netology-git/demo.git</code>
+                      <code>git clone url remote repository</code>
+                      <br>    
+                      переходим в появившуюся папку команда<code>cd demo/</code>  нужна чтобы зайти в папку скопированного репозитория                
+                     После клонирования, создастся каталог demo, с нашим репозиторием (уже привязанный к удалённому).
+                    <br><br>                    
+                            
+            </div>
+        </details>
+        <h2>Работа с удаленным репозиторием</h2>
+        <details>
+            <summary> Добавление изменений в удаленный репозитрий</summary>
+            После того, как мы поработали локально, необходимо отправить наши
+            изменения в удалённый репозиторий.
+            Для этого используется команда  <code>git push</code> <br> 
+            для первой отправки:<code>git push -u origin master</code> <br> 
+
+        </details>
+        <details>
+            <summary>README.md язык Markdown </summary>
+            <div>
+
+            </div>
+        </details>
+             
 
 </body>
 </html>
