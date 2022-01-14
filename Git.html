@@ -211,13 +211,116 @@
 <code>
 JavaScript. Этот язык мы и указываем.
 ```javascript
-console.log("");
-```
+console.log("");``
 
 </code>
             </div>
         </details>
-             
+      <h2> branch - ветки</h2>
+  <details> <summary> работа с ветками </summary>
+    <div class="text">
+        Посмотреть существующие ветки можно с помощью команды
+        <code>git branch</code>
+        <br>
+        Создать новую ветку можно с помощью команды
+        <code>branch имя-новой-ветки</code> 
+        <br>
+         Для того, чтобы переключиться на другую ветку, необходимо использовать
+        команду <code> git checkout имя-ветки</code> чтобы при переключении не было проблем,
+         возьмите за привычку фиксировать все файлы до переключения
+        <br>
+         добавить новую ветку в GitHub  :
+        <code>push –u origin feature/payment (имя ветки)</code> <br> 
 
+        При клонировании репозитория с удалённого сервера Git автоматически
+        создаёт удалённую ветку origin/master и локальную master .
+        Для всех остальных удалённых веток локальные ветки не создаются их
+        нужно создавать с помощью команды: git branch имя-ветки локально origin/имя-ветки-удалённо .
+        Например, чтобы скопировать из удалённого репозитория ветку с
+        названием edit/article нужно выполнить команду: <code> git branch edit/article origin/edit/article</code>
+        В результате в локальном репозитории появится ветка edit/article ,     
+        связанная с веткой в удалённом репозитории.
+        <br>
+        <br>  
+         Удалить ветку с GitHub и локально  <code>git branch -d имя-ветки</code> 
+         <code>git push --delete origin feature/payment </code>  
+          <br> 
+
+    </div>
+  </details>           
+         <details> <summary> слияние изменений/веток merge</summary>
+  <div class="text">
+        1. Переключаемся на главную ветку master ;
+        2. Выполняем операцию <code>git merge --no-ff feature/payment(ветка для слива)</code> ;
+        3. Заливаем всё на GitHub.
+        В результате слияния создаётся новый коммит, в рамках которого и
+        объединяются изменения из ветки feature/payment в ветку master .
+
+        <br>
+        Для просмотра истории конкретной ветки:
+        <code>git log feature/payment --graph --oneline</code> 
+        <br>
+         Git умеет самостоятельно «сливать» изменения, если они не приводят к
+         конфликтам.
+        <figure>
+            <p ><img class="picture" src="images/confl.PNG"  alt=" URL репозитория"></p>
+            <figcaption>
+            Конфликт выглядит в редакторе вот так
+            </figcaption>
+            </figure>
+         мы руками должны отредактировать строки 8-12, чтобы не
+         осталось символов   <code><<<<< HEAD ,======, >>>> </code>
+         feature/analytics приведя файл к нужному нам виду, придётся обработать все файлы, в которых 
+         возникли конфликты. Посмотреть все файлы с конфликтами можно с помощью 
+        <code> git status  You have unmerged paths.
+         (fix conflicts and run "git commit")
+         ( use "git merge --abort" to abort the merge)</code>          
+        <br>
+
+         история в виде графа  :
+        <code>git log --graph --oneline</code> <br> 
+        <figure>
+            <p ><img class="picture" src="images/graph.PNG"  alt=" URL репозитория"></p>
+            <figcaption>
+            После разрешения конфликта и коммита, граф будет выглядеть
+            следующим образом:
+            </figcaption>
+        </figure>         
+        <br>
+        </div>
+  </details> 
+
+        <h2> теги</h2>
+       <details>
+           <summary>работа с тегами</summary>
+          <div class="text">
+            добавим тег в  историю:
+            <code>git tag –a v1.0 –m "Версия 1.0"</code>
+             <br>
+             Просмотреть теги можно с помощью команды
+             <code>git tag  v1.0</code>
+             <br>
+
+              <code>git show</code> позволяет получить информацию о метке
+              <code>git show v1.0</code>
+             <br>
+             Теги можно добавить и позже, указав id-коммита:
+             <code>git tag –a v1.0 –m "Версия 1.0" id-коммита</code>
+               <br>
+             По умолчанию теги не отправляются при выполнении git push
+             Это необходимо указать явно:  ы
+               <code>git push --tags </code>
+               <br>
+            Если вы ещё не отправили тег на GitHub,то удалить его можно командой: 
+                <code> git tag -d v1.0</code>
+               <br>
+               Если же уже отправили,то:
+                <code>git push --delete origin v1.0</code>
+                <code>git tag -d v1.0</code>
+               <br>
+          </div> 
+       </details> 
+          
+  
 </body>
 </html>
