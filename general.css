@@ -15,7 +15,11 @@ margin-right: auto;
 font-style: normal;
 font-size: 20px;   
 }
-
+details[open] {
+  border: 10px solid rgb(233, 14, 14); 
+  width: 800px; 
+   
+}
 
 summary{
      cursor: pointer;
