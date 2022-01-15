@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="general.css">
     
 </head>
-<body>
-
-     <h2>Инициализация и работа в локальном репозитории</h2>    
-        
+<body>  
+         <h1>GitHub</h1>
         <details>
             <summary>инициализация </summary>
             <div class="text">
@@ -120,9 +118,9 @@
                          <code>*.txt </code>     <br><br>          
             </div>
         </details>
-        <h2>Удаленный репозиторий</h2>
+        
         <details>
-              <summary> СОЗДАНИЕ РЕПОЗИТОРИЯ НА GITHUB </summary> 
+              <summary> создание репозитория GitHub </summary> 
                <div class="text">
                1. Name — имя репозитория, вводится английскими буквами; <br>  
                2. Description — описание репозитория (опционально); <br>  
@@ -142,7 +140,7 @@
             </div>
 </details>
 <details>
-           <summary> <h3> к локальному репозиторию с проектом, привязать удаленный репозиторий на GitHub</h3></summary>
+           <summary>  к локальному репозиторию с проектом, привязать удаленный репозиторий на GitHub</summary>
             <div class="text">
 
                 локальный репозиторий с проектом, подключить к удалённому:
@@ -164,7 +162,7 @@
                             
             </div>
         </details>
-        <h2>Работа с удаленным репозиторием</h2>
+        
         <details>
             <summary> Добавление изменений в удаленный репозитрий</summary>
             <div class="text">
@@ -216,8 +214,8 @@ console.log("");``
 </code>
             </div>
         </details>
-      <h2> branch - ветки</h2>
-  <details> <summary> работа с ветками </summary>
+      
+  <details> <summary> работа с  branch - ветками </summary>
     <div class="text">
         Посмотреть существующие ветки можно с помощью команды
         <code>git branch</code>
@@ -261,7 +259,7 @@ console.log("");``
          Git умеет самостоятельно «сливать» изменения, если они не приводят к
          конфликтам.
         <figure>
-            <p ><img class="picture" src="images/confl.PNG"  alt=" URL репозитория"></p>
+            <p ><img class="picture" src="images/confl.PNG"  alt=" Конфликт  в редакторе "></p>
             <figcaption>
             Конфликт выглядит в редакторе вот так
             </figcaption>
@@ -278,10 +276,9 @@ console.log("");``
         
         </div>
   </details> 
-
-        <h2> теги</h2>
+        
        <details>
-           <summary>работа с тегами</summary>
+           <summary> теги</summary>
           <div class="text">
             добавим тег в  историю:
             <code>git tag –a v1.0 –m "Версия 1.0"</code>
@@ -315,7 +312,8 @@ console.log("");``
              история в виде графа  :
         <code>git log --graph --oneline</code> <br> 
         <figure>
-            <p ><img class="picture" src="images/graph.PNG"  alt=" URL репозитория"></p>
+            <p ><img class="picture" src="images/graph.PNG"  alt=" граф будет выглядеть
+            следующим образом:"></p>
             <figcaption>
             После разрешения конфликта и коммита, граф будет выглядеть
             следующим образом:
@@ -327,7 +325,7 @@ console.log("");``
         <br>
         Смотрим историю через <code> git log</code>
          <figure>
-            <p ><img class="picture" src="images/git log.PNG"  alt=" URL репозитория"></p>
+            <p ><img class="picture" src="images/git log.PNG"  alt=" комиты последовательно"></p>
             <figcaption>
            все  комиты последовательно ,  нет кастомизированной информации
             </figcaption>
@@ -335,15 +333,15 @@ console.log("");``
         <br>
           указать конкретный путь/имя файла<code> git log -- index.html</code>
          <figure>
-            <p ><img class="picture" src="images/git log --fail.html.PNG"  alt=" URL репозитория"></p>
+            <p ><img class="picture" src="images/git log --fail.html.PNG"  alt=" комиты относящиеся конкретному файлу"></p>
             <figcaption>
-             комиты относящиеся нетному файлу
+             комиты относящиеся конкретному файлу
             </figcaption>
         </figure>         
         <br>
           мы можем для каждого коммита посмотреть информацию, ЕСЛИ знаем его id:<code> git show ffbf1e -- index.html</code>
          <figure>
-            <p ><img class="picture" src="images/git show ffbf1e -- index.html.PNG"  alt=" URL репозитория"></p>
+            <p ><img class="picture" src="images/git show ffbf1e -- index.html.PNG"  alt="git show ffbf1e -- index.html.PNG"></p>
             <figcaption>
              инфа по конетному коммиту видно что конетно изменилось 
             </figcaption>
@@ -351,7 +349,7 @@ console.log("");``
         <br>
          можно совместить конретику по файлу и  раширенную инфу по всем коммитам <code>  git log -p -- index.html</code>
          <figure>
-            <p ><img class="picture" src="images/git log -p -- index.html.PNG"  alt=" URL репозитория"></p>
+            <p ><img class="picture" src="images/git log -p -- index.html.PNG"  alt="git log -p -- index.html.PNG"></p>
             <figcaption>
              инфа по конетному коммиту 
             </figcaption>
@@ -359,7 +357,7 @@ console.log("");``
         <br>
         можно выполнить поиск конкретного коммита<code>git log --grep 'Перво'</code>
          <figure>
-            <p ><img class="picture" src="images/git log --grep 'Перво'.PNG"  alt=" URL репозитория"></p>
+            <p ><img class="picture" src="images/git log --grep 'Перво'.PNG"  alt="git log --grep 'Перво'.PN"></p>
             <figcaption>
              поиск по  ЧАСТИ названия коммита
             </figcaption>
@@ -368,7 +366,7 @@ console.log("");``
           Если же мы знаем конкретную строку для поиска,то мы можем поискать
          все коммиты, связанные с добавлением/удалением этой строки:.<code> git log -S'строка' -p </code>
          <figure>
-            <p ><img class="picture" src="images/git log -S'page' -p.PNG"  alt=" URL репозитория"></p>
+            <p ><img class="picture" src="images/git log -S'page' -p.PNG"  alt="поиск по  общей строке входящей в несколько названия коммитов"></p>
             <figcaption>
              поиск по  общей строке входящей в несколько названия коммитов
             </figcaption>
@@ -376,9 +374,74 @@ console.log("");``
         <br>
          По умолчанию git ищет по той ветке, на которой вы в данный момент
             находитесь. Флаг --all позволяет искать по всем веткам.<code>git log --all</code>
-    
+            <br> <br> 
+     посмотреть авторство всех коммитов по строчно в файле<code> git blame -L 377,381 Git.html</code>
+     диапазон строк задается <code>-L 377,381</code>
+         <figure>
+            <p ><img class="picture" src="images/git blame.PNG"  alt="  git blame автор изменений каждой строки"></p>
+            <figcaption>
+             git blame автор изменений каждой строки
+            </figcaption>
+        </figure>         
+        <br>
               </div>
          </details> 
-  
+         <details> <summary>откат изменений</summary>
+            <div class="text">
+
+                Фактически, ветка представляет из себя указатель на определённый коммит в истории,
+                 который Git автоматически передвигает при создании нового коммита.
+                 В каждом коммите есть специальное поле, которое содержит «родительский» (или
+                «родительские», если их несколько) коммиты. Таким образом, понятие
+                 принадлежности коммита ветки определяется лишь тем, содержится ли он
+                 в цепочке родителя, родителя родителя и т.д. коммита, на который сейчас указывает ветка.
+                 В рамках Git помимо веток, которые являются указателями на коммиты,
+                 есть ещё один указатель– это HEAD . Он как раз и определяет то, в какой
+                 ветке мы сейчас находимся,т.к. содержит в себе ссылку на ветку (напоминаю, что ветка – это указатель на коммит).
+                 Можно передвинуть указатель HEAD не на ветку, а на определённый коммит (на который не указывает ни одна ветка)
+                 Состояние, когда HEAD указывает не на ветку, а на коммит (на который не указывает ни одна ветка) называется Detached HEAD. 
+                 В этом состоянии можно делать коммиты, но не рекомендуется.Для такой ситуации есть два ключевых сценария:
+                <br><br>
+                сценарий 1 Создать на базе этого коммита новую ветку: <code>git branch имя-ветки + git checkout имя-ветки </code>
+                можно обьединить эти команды  <code>git checkout –b имя-ветки</code>
+                сценарий 2 . Вернуться на другую ветку (если мы хотели просто посмотреть состояние этого коммита).
+                <code> git checkout master</code><br>
+                Можно вернуться к любому моменту в истории с помощью команды git checkout
+                <code> git checkout id-коммита </code>
+                <br>
+                В Git реализован механизм, который называется <code>fast-forward</code>
+                 Что он делает: если он видит при слиянии изменений, что самым простым
+                сценарием является просто переместить указатель на ветку на
+                определённый коммит и не делать merge commit,то он так и поступает
+                В большинстве случаев это не желательное поведение, поэтому мы
+                отключаем этот механизм с помощью флага <code>--no-ff</code>  <br>  
+
+                git reset Позволяет нам передвигать указатель,тем самым эмулируя «отмену»
+                коммитов (сами коммиты по факту не отменяются, мы просто перемещаем указатель).
+                На самом деле отменить коммиты нельзя, можно лишь сделать новые <code>git reset</code>  <br>
+                – передвигаем указатель на определённый коммит, не сохраняя никаких изменений; 
+                <code> reset --hard id-коммита</code> 
+                <figure style=" width: 680px;">
+                    <p ><img class="picture" src="images/reset.PNG"  alt=" reset --hard" style=" width: 500px;" ></p>
+                 <figcaption>
+                    «Cледующие» коммиты по истории потерялись и все изменения в индексе и рабочем каталоге тоже.
+                </figcaption>
+                 </figure>         
+                <br>
+                передвигаем указатель на определённый коммит, при этом предыдущие изменения сохраняются в рабочем каталоге и index'е;
+                «Cледующие» коммиты по истории хоть и потерялись, но все изменения лежат в stage area , а также сохранились наши 
+                изменения в рабочем каталоге.
+                <code> reset --soft id-коммита</code>  <br>
+                --mixed (по умолчанию, можно не указывать) – передвигаем указатель на определённый коммит, при этом
+                  предыдущие изменения сохраняются в рабочем каталоге, но не в index'е. «Cледующие» коммиты по истории хоть
+                   и потерялись, но все изменения из коммитов и из рабочего каталога лежат в рабочем каталоге (но не в stage area ).
+                <code> reset --mixed id-коммита</code>  <br>
+                Вместо того, чтобы каждый раз указывать id-коммита, мы можем воспользоваться специальным синтаксисом:
+                <code>git reset режим HEAD~число</code>
+                Это будет значить, что мы хотим отойти от HEAD на n-шагов, указанных числом после ~ .<br><br>
+
+            </div>  
+         </details>
+         
 </body>
 </html>

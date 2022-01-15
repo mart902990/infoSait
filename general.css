@@ -16,6 +16,18 @@ font-style: normal;
 font-size: 20px;   
 }
 
+
+summary{
+     cursor: pointer;
+     padding: 3px;
+     margin-top: 10px;
+      margin-left: 25px;
+     background: rgb(61, 145, 194);
+   font-size: 20px;
+    font-weight: 600;   
+    border: 2px solid rgb(62, 8, 209); 
+      width: 800px;
+}
 .film {
     border: 2px solid rgb(62, 8, 209);    
     background: rgb(211, 208, 14);
@@ -58,23 +70,22 @@ code
  font-weight: 600;   
  color: #320796;
 }
+
 .picture 
 {
- /*border: 2px solid rgb(62, 8, 209);    */
-   
-   
-     width: 700px;
+   /*border: 2px solid rgb(62, 8, 209); */ 
+     width: 680px;
      height: 400px;
-     margin-left: 25px;
-margin-right: auto;
-   margin-top: 5px;
+     margin-left: 5px;
+     margin-right: 5px;
+     margin-top: 5px;
 }
 figure
 {
    padding: 10px;
    font-weight: 600;   
    width: 750px;
-   margin-left: 35px;
+   margin-left: 5px;
  border: 2px solid rgb(11, 8, 209);
 }
 
