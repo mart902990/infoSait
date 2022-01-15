@@ -257,9 +257,7 @@ console.log("");``
         объединяются изменения из ветки feature/payment в ветку master .
 
         <br>
-        Для просмотра истории конкретной ветки:
-        <code>git log feature/payment --graph --oneline</code> 
-        <br>
+       
          Git умеет самостоятельно «сливать» изменения, если они не приводят к
          конфликтам.
         <figure>
@@ -277,16 +275,7 @@ console.log("");``
          ( use "git merge --abort" to abort the merge)</code>          
         <br>
 
-         история в виде графа  :
-        <code>git log --graph --oneline</code> <br> 
-        <figure>
-            <p ><img class="picture" src="images/graph.PNG"  alt=" URL репозитория"></p>
-            <figcaption>
-            После разрешения конфликта и коммита, граф будет выглядеть
-            следующим образом:
-            </figcaption>
-        </figure>         
-        <br>
+        
         </div>
   </details> 
 
@@ -308,7 +297,7 @@ console.log("");``
              <code>git tag –a v1.0 –m "Версия 1.0" id-коммита</code>
                <br>
              По умолчанию теги не отправляются при выполнении git push
-             Это необходимо указать явно:  ы
+             Это необходимо указать явно:  
                <code>git push --tags </code>
                <br>
             Если вы ещё не отправили тег на GitHub,то удалить его можно командой: 
@@ -320,7 +309,76 @@ console.log("");``
                <br>
           </div> 
        </details> 
-          
+         <datalist>
+             <summary>история</summary>
+              <div class="text">
+             история в виде графа  :
+        <code>git log --graph --oneline</code> <br> 
+        <figure>
+            <p ><img class="picture" src="images/graph.PNG"  alt=" URL репозитория"></p>
+            <figcaption>
+            После разрешения конфликта и коммита, граф будет выглядеть
+            следующим образом:
+            </figcaption>
+        </figure>         
+        <br>
+         Для просмотра истории конкретной ветки:
+        <code>git log feature/payment --graph --oneline</code> 
+        <br>
+        Смотрим историю через <code> git log</code>
+         <figure>
+            <p ><img class="picture" src="images/git log.PNG"  alt=" URL репозитория"></p>
+            <figcaption>
+           все  комиты последовательно ,  нет кастомизированной информации
+            </figcaption>
+        </figure>         
+        <br>
+          указать конкретный путь/имя файла<code> git log -- index.html</code>
+         <figure>
+            <p ><img class="picture" src="images/git log --fail.html.PNG"  alt=" URL репозитория"></p>
+            <figcaption>
+             комиты относящиеся нетному файлу
+            </figcaption>
+        </figure>         
+        <br>
+          мы можем для каждого коммита посмотреть информацию, ЕСЛИ знаем его id:<code> git show ffbf1e -- index.html</code>
+         <figure>
+            <p ><img class="picture" src="images/git show ffbf1e -- index.html.PNG"  alt=" URL репозитория"></p>
+            <figcaption>
+             инфа по конетному коммиту видно что конетно изменилось 
+            </figcaption>
+        </figure>         
+        <br>
+         можно совместить конретику по файлу и  раширенную инфу по всем коммитам <code>  git log -p -- index.html</code>
+         <figure>
+            <p ><img class="picture" src="images/git log -p -- index.html.PNG"  alt=" URL репозитория"></p>
+            <figcaption>
+             инфа по конетному коммиту 
+            </figcaption>
+        </figure>         
+        <br>
+        можно выполнить поиск конкретного коммита<code>git log --grep 'Перво'</code>
+         <figure>
+            <p ><img class="picture" src="images/git log --grep 'Перво'.PNG"  alt=" URL репозитория"></p>
+            <figcaption>
+             поиск по  ЧАСТИ названия коммита
+            </figcaption>
+        </figure>         
+        <br>
+          Если же мы знаем конкретную строку для поиска,то мы можем поискать
+         все коммиты, связанные с добавлением/удалением этой строки:.<code> git log -S'строка' -p </code>
+         <figure>
+            <p ><img class="picture" src="images/git log -S'строка' -p.PNG"  alt=" URL репозитория"></p>
+            <figcaption>
+             поиск по  общей строке входящей в несколько названия коммитов
+            </figcaption>
+        </figure>         
+        <br>
+         По умолчанию git ищет по той ветке, на которой вы в данный момент
+            находитесь. Флаг --all позволяет искать по всем веткам.<code>git log --all</code>
+
+              </div>
+         </datalist> 
   
 </body>
 </html>
