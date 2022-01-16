@@ -486,16 +486,67 @@ console.log("");``
                   локальном. Обычно это вызвано отправкой другого репозитория.
                 </figcaption>
                  </figure>   
-                 git fetch позволяет вам получить удалённые изменения не модифицируя файлы в working directory.
+                  получаем  изменения из удаленной ветки не модифицируя файлы в working directory
+                <figure style=" width: 750px;">
+                    <p ><img class="picture" src="images/git fetch.PNG"  alt="" style=" width: 700px;" ></p>
+                 <figcaption>
+                  git fetch позволяет вам получить удалённые изменения не модифицируя файлы в working directory.
                  Это позволит вам в комфортном режиме отсмотреть все изменения и сделать merge .
-
-
+                </figcaption>
+                 </figure> 
+                 git status позволяет отследить синхронизацию между лкальной и удаленной ветвью
+                  <figure style=" width: 750px;">
+                    <p ><img class="picture" src="images/git status fetch.PNG"  alt="" style=" width: 700px;" ></p>
+                 <figcaption>
+                  На локальной branch master и 'origin/feature/sale' данные разошлись
+                  и имеются 1 и 1 разнящиеся коммиты соответственно.
+                  (используйте «git pull», чтобы объединить удаленную ветку с локальной)
+                </figcaption>
+                 </figure> 
+                  чтобы посмотреть изменения нужна команда git checkout
+                 <figure style=" width: 750px;">
+                    <p ><img class="picture" src="images/checkout.PNG"  alt="" style=" width: 700px;" ></p>
+                 <figcaption>
+                   git checkout origin/feature/sale
+                  Примечание: проверьте  origin/feature/sale
+                  Вы находитесь в  «режиме Detached HEAD». Вы можете осмотреться, сделать эксперимент
+                  изменения и заккомитить  их, и вы можете отказаться от любых коммитов, сделанных в этом
+                     состояние, не влияя на какие-либо ветки, выполнив еще одну проверку.
+                </figcaption>
+                 </figure> 
+                 Каждый раз, когда вы будете переключаться на ветку feature/sale
+                 (локальную) git вас будет предупреждать о том, что имеются расхождения,
+                  которые нужно слить
+                  <figure style=" width: 750px;">
+                    <p ><img class="picture" src="images/checkoutmerge.PNG"  alt="" style=" width: 700px;" ></p>
+                 <figcaption>
+                  master$ git checkout функция/распродажа
+                  локальная ветка и "'origin/feature/sale' " разошлись,
+                  и имеют по  1 разному коммиту соответственно.
+                  (используйте «git pull», чтобы объединить удаленную ветку с вашей) 
+                </figcaption>
+                 </figure> 
+                 Для слияния достаточно выполнить в ветке feature/sale команду
+                git merge (процесс будет аналогичен тому, который происходит при разрешение конфликтов
+                при слиянии двух разных веток)
+                 <figure style=" width: 750px;">
+                    <p ><img class="picture" src="images/marge.PNG"  alt="marge" style=" width: 700px;" ></p>
+                 <figcaption>
+                  Слияние по «рекурсивной» стратегии.
+                  index.html | 4++-- 1 файл изменен, 2 вставки(+), 2 удаления(-)
+                </figcaption>
+                 </figure> 
+                 После merge уже можно делать push:
+                 <br> <br> 
+                 Команда<code>git pull </code> позволяет выполнить описанный выше двухшаговый
+                процесс ( fetch + merge ) за один шаг: т.е. вы выкачиваете изменения
+                 нужной ветки и сразу переходите в режим слияния
              </div>
              
          </details>
 
           <details>
-             <summary></summary>
+             <summary>GitHub Pages </summary>
              <div class="text">
 
              </div>
