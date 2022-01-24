@@ -21,3 +21,4 @@ echo "работает? AJAX \n";
 echo '<pre>';
 print_r($_COOKIE);
 echo '<pre>';
+//внесемм изменение чтобы файл схавад git&&&&&
