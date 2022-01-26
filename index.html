@@ -4,18 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p><a href="GitHub.html">Git Hub</a></p>
-    <p><a href="failtext.html">failtext</a></p>
-    <p><a href="tegihtml.html">tegihtml</a></p>
-    <p><a href="openweathermap.js">openweathermap.js</a></p>
-    <p><a href="requestReturn.html">requestReturn.html</a></p>
-    <p><a href="formAjax.html">formAjax.html</a></p>
-    <p><a href="ajax.js">ajax.js</a></p>
-    <p><a href="backend.php">backend.php</a></p>
-    <p><a href="history.html">history.html</a></p>
-    <p><a href="Cookie/Cookie.html">Cookie & SESSION</a></p>
+    <link rel="stylesheet" href="general.css">
+    <style>
+  
+</style>  
+</head>   
+    <body>    
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+            
+            <p><a href="GitHub.html">Git Hub</a></p>
+            <p><a href="failtext.html">failtext</a></p>
+            <p><a href="tegihtml.html">tegihtml</a></p>
+            <p><a href="openweathermap.js">openweathermap.js</a></p>
+            <p><a href="requestReturn.html">requestReturn.html</a></p>
+            <p><a href="formAjax.html">formAjax.html</a></p>
+            <p><a href="ajax.js">ajax.js</a></p>
+            <p><a href="backend.php">backend.php</a></p>
+            <p><a href="history.html">history.html</a></p>
+            <p><a href="Cookie/Cookie.html">Cookie & SESSION</a></p>
+        </div>
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ меню ☰</span>
+      <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>  
+
 </body>
 </html>

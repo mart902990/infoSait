@@ -5,8 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=git, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="general.css">
+    
 </head>
 <body>
+    <section class="menu">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">х</a>
+    
+            <p><a href="GitHub.html">Git Hub</a></p>
+            <p><a href="failtext.html">failtext</a></p>
+            <p><a href="tegihtml.html">tegihtml</a></p>
+            <p><a href="openweathermap.js">openweathermap.js</a></p>
+            <p><a href="requestReturn.html">requestReturn.html</a></p>
+            <p><a href="formAjax.html">formAjax.html</a></p>
+            <p><a href="ajax.js">ajax.js</a></p>
+            <p><a href="backend.php">backend.php</a></p>
+            <p><a href="history.html">history.html</a></p>
+            <p><a href="Cookie/Cookie.html">Cookie & SESSION</a></p>
+        </div>
+    
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ Histiry ☰</span>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </section>
+    <div>
    commit 0b727e541003f43eb3fce12edf77d9c1f73f45e3 (HEAD -> gitsait, 
 origin/gitsait)
 Author: mart902990 <mart902990@gmail.com>
@@ -163,5 +193,6 @@ Author: Martynenko <mart902990@gmail.com>
 Date:   Thu Jan 13 20:09:24 2022 +0700
 
     init git 
+    </div>
 </body>
 </html>
